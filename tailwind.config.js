@@ -1,11 +1,8 @@
 module.exports = {
+  purge: ['./src/components/**/*.{js,ts,jsx,tsx}', './pages/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
       display: ["Mulish", "sans-serif"],
-      serif: [
-        'Playfair\\ Display',
-        ...defaultTheme.fontFamily.serif,
-      ],
       body: ["Mulish", "sans-serif"],
     },
     extend: {
