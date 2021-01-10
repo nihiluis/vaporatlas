@@ -1,4 +1,8 @@
+export const DEV = process.env.NODE_ENV !== "production"
+
+export const BASE_PATH = "/app"
+
 export const API_URL =
-  process.env.NODE_ENV === "production"
-    ? "https://vaporatlas-api.herokuapp.com"
+  !DEV
+    ? "https://vaporatlas-api.nihiluis.com"
     : "http://localhost:1312"

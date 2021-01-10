@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css"
 import { Layout } from "../src/components/ui/Layout"
 import { VideoInfo } from "../src/@types/models"
 import { API_URL } from "../src/constants/env"
-import { useMemo, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 
 async function getRandomVideo(): Promise<VideoInfo> {
   const url = new URL("/random", API_URL)
@@ -44,7 +44,6 @@ export default function Home() {
     <div className={styles.container}>
       <Head>
         <title>Vapor Atlas</title>
-        <link rel="icon" href="/logo.png" />
       </Head>
       <Layout>
         <div className="mx-auto">
@@ -72,9 +71,7 @@ export default function Home() {
           )}
           {randomVideoLoading && (
             <div className="mx-auto table">
-              <p className="">
-                Just a moment. Waking up the server...
-              </p>
+              <p className="">Just a moment. Waking up the server...</p>
             </div>
           )}
         </div>
